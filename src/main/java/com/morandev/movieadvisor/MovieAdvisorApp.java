@@ -9,7 +9,8 @@ public class MovieAdvisorApp {
 
 	public static void main(String... args) {
 		
-		ApplicationContext appContext = new AnnotationConfigApplicationContext(AppConfig.class);
+		ApplicationContext appContext;
+		appContext = new AnnotationConfigApplicationContext( AppConfig.class );
 		
 		MovieAdvisorRunApp advisorRunApp = appContext.getBean(MovieAdvisorRunApp.class);
 		

@@ -22,9 +22,6 @@ public class UtilFilmFileReader {
 			.skip(1)
 			.map( ln -> {
 				String [] values = ln.split(separator);
-				//TODO: borrar este debugger
-				System.out.println("Los valores de la linea spliteada: ");
-				System.out.println( Arrays.toString(values) + "\n");
 
 				return new Film(Long.parseLong(values[0]), values[1], values[2],
 						Arrays.asList(values[3].split(listSeparator)));
