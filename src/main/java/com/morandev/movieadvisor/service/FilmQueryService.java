@@ -11,6 +11,6 @@ public interface FilmQueryService {
 	FilmQueryService allGenres(String... genres);
 	FilmQueryService year(String year);
 	FilmQueryService betweenYears(String from, String to);
-	FilmQueryService titleCOntains(String title);
+	FilmQueryService titleContains(String title);
 
 }

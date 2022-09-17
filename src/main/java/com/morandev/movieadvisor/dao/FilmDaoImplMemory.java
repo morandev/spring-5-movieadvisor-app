@@ -5,6 +5,8 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
+import javax.annotation.PostConstruct;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -14,27 +16,27 @@ import com.morandev.movieadvisor.config.AppConfig;
 /* bean repository */
 @Repository
 public class FilmDaoImplMemory implements FilmDao {
-	
+
 	/* Inyectamos la dependencia de AppConfig*/
 	@Autowired
 	private AppConfig appConfig;
-	
+
 	private List<Film> movies = new ArrayList<>();
-	
-	
+
+	@PostConstruct
 	public void init() throws Exception {
 		movies = UtilFilmFileReader.readFile( appConfig.getFilePath(),
 											appConfig.getLineSeparator(),
 											appConfig.getListItemSeparator());
 	}
-	
+
 	@Override
 	public Film findById(long id) {
-		
+
 		Optional<Film> filmFromData = movies.stream()
 											.filter( mv -> mv.getId() == id )
 											.findFirst();
-		
+
 		return filmFromData.orElse( null );
 	}
 

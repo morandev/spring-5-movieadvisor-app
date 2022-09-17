@@ -11,10 +11,10 @@ import org.springframework.context.annotation.PropertySource;
 /* carga nuestro archivo de propiedades */
 @PropertySource("classpath:/app.properties")
 public class AppConfig {
-	
+
 	/* la idea es inyectar AppConfig en las clases que necesiten
 	 * valores del archivo de propiedades */
-	
+
 	/* con la etiqueta value leemos las propiedades*/
 	@Value("${file.path}")
 	private String filePath;
@@ -22,15 +22,15 @@ public class AppConfig {
 	private String lineSeparator;
 	@Value("${file.csv.list_separator}")
 	private String listItemSeparator;
-	
+
 	public String getFilePath() {
 		return filePath;
 	}
-	
+
 	public String getLineSeparator() {
 		return lineSeparator;
 	}
-	
+
 	public String getListItemSeparator() {
 		return listItemSeparator;
 	}
