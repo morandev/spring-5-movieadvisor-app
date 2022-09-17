@@ -47,4 +47,8 @@ LICENCIAS
 
 Los datos utilizados sobre películas utilizados en este ejemplo son
 reales y están sacados del sitio web www.imdb.com. Ten en cuenta
+<<<<<<< HEAD
 que solo puede ser usada con fines personales y no comerciales.
+=======
+que solo puede ser usada con fines personales y no comerciales.
+>>>>>>> a5a3850c2642b6330fcd9a60ae08277fc5997acb
