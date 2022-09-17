@@ -7,8 +7,8 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.morandev.movieadvisor.Film;
 import com.morandev.movieadvisor.dao.FilmDao;
+import com.morandev.movieadvisor.model.Film;
 
 @Service
 public class FilmService {
@@ -17,6 +17,10 @@ public class FilmService {
 	private FilmDao filmDao;
 	@Autowired
 	private FilmQueryService filmQueryService;
+	
+	public Collection<Film> findAll() {
+		return filmDao.findAll();
+	}
 	
 	public Collection<String> findAllGenres() {
 		List<String> genres = null;

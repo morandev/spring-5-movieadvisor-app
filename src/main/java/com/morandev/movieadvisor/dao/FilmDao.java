@@ -2,7 +2,7 @@ package com.morandev.movieadvisor.dao;
 
 import java.util.Collection;
 
-import com.morandev.movieadvisor.Film;
+import com.morandev.movieadvisor.model.Film;
 
 public interface FilmDao {
 	Film findById(long id);

@@ -2,7 +2,7 @@ package com.morandev.movieadvisor.service;
 
 import java.util.Collection;
 
-import com.morandev.movieadvisor.Film;
+import com.morandev.movieadvisor.model.Film;
 
 public interface FilmQueryService {
 

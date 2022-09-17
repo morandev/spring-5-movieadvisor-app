@@ -11,8 +11,8 @@ import javax.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.morandev.movieadvisor.Film;
 import com.morandev.movieadvisor.dao.FilmDao;
+import com.morandev.movieadvisor.model.Film;
 
 @Service
 public class FilmQueryServiceImpl implements FilmQueryService {

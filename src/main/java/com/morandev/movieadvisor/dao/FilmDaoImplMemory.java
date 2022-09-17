@@ -10,8 +10,8 @@ import javax.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.morandev.movieadvisor.Film;
 import com.morandev.movieadvisor.config.AppConfig;
+import com.morandev.movieadvisor.model.Film;
 
 /* bean repository */
 @Repository

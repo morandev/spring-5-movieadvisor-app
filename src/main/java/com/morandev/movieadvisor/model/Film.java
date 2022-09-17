@@ -1,4 +1,4 @@
-package com.morandev.movieadvisor;
+package com.morandev.movieadvisor.model;
 
 import java.util.List;
 import java.util.Objects;

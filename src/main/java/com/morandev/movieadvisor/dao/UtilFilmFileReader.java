@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 
 import org.springframework.util.ResourceUtils;
 
-import com.morandev.movieadvisor.Film;
+import com.morandev.movieadvisor.model.Film;
 
 public class UtilFilmFileReader {
 	public static List<Film> readFile(final String path,
