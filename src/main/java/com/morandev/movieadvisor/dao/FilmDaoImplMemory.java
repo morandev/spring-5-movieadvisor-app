@@ -3,6 +3,7 @@ package com.morandev.movieadvisor.dao;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -29,32 +30,34 @@ public class FilmDaoImplMemory implements FilmDao {
 	
 	@Override
 	public Film findById(long id) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		Optional<Film> filmFromData = movies.stream()
+											.filter( mv -> mv.getId() == id )
+											.findFirst();
+		
+		return filmFromData.orElse( null );
 	}
 
 	@Override
 	public Collection<Film> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return movies;
 	}
 
 	@Override
 	public void insert(Film film) {
-		// TODO Auto-generated method stub
-
+		movies.add(film);
 	}
 
 	@Override
 	public void edit(Film film) {
-		// TODO Auto-generated method stub
-
+		int idx = movies.indexOf( this.findById( film.getId() ) );
+		if( idx != -1 ) movies.set( idx, film );
 	}
 
 	@Override
 	public void delete(long id) {
-		// TODO Auto-generated method stub
-
+		int idx = movies.indexOf( this.findById( id ) );
+		if( idx != -1 ) movies.remove( idx );
 	}
 
 }
