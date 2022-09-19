@@ -1,4 +1,7 @@
-Sintaxis: java -jar movieadvisor.jar [OPCIONES]
+### Movie Advisor
+![diagrama-movieadvisor](https://user-images.githubusercontent.com/93687744/191080100-05eede7b-fbe6-4719-953a-c7c75a9bdb0f.png)
+
+### Sintaxis: java -jar movieadvisor.jar [OPCIONES]
 
 	-lg
 	Lista los diferentes géneros de películas de la colección.
@@ -27,20 +30,20 @@ Sintaxis: java -jar movieadvisor.jar [OPCIONES]
 	-h
 	Muestra este mensaje de ayuda.
 	
-EJEMPLOS DE USO
+### EJEMPLOS DE USO
 
-java -jar movieadvisor.jar -y 2018 -ag Action,Comedy
-Muestra las películas estrenadas de 2018 de acción y/o de comedia.
+- java -jar movieadvisor.jar -y 2018 -ag Action,Comedy
+*Muestra las películas estrenadas de 2018 de acción y/o de comedia.*
 
-java -jar movieadvisor.jar -t heart
-Muestra las películas cuyo título contiene la palabra heart.
+- java -jar movieadvisor.jar -t heart
+*Muestra las películas cuyo título contiene la palabra heart.*
 
-java -jar movieadvisor.jar -td Action,Sci-Fi -b 1990,2010 -t star
-Muestra las películas cuyo título contiene la palabra star, pertenecen al 
-género de acción y ciencia ficción y fueron estrenadas entre 1990 y 2010.   
+- java -jar movieadvisor.jar -td Action,Sci-Fi -b 1990,2010 -t star
+*Muestra las películas cuyo título contiene la palabra star, pertenecen al 
+género de acción y ciencia ficción y fueron estrenadas entre 1990 y 2010.*   
 
-java -jar movieadvisor.jar -lg
-Muestra un listado con todos los géneros.
+- java -jar movieadvisor.jar -lg
+*Muestra un listado con todos los géneros.*
 
 
 LICENCIAS
